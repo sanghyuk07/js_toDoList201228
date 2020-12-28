@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "reset.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+
+  background: #03dfff;
+  background: linear-gradient(139deg, #03dfff 0%, #ff0381b6 90%);
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.addTask {
+  width: 100%;
+  display: flex;
+  padding: 10px, 0;
+}
+.addTask > input[type="text"] {
+  width: 90%;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #666;
+  /* border-radius: 10px; */
+  background: none;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+}
+.addTask button {
+  margin: 0 20px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  /* 대문자를 소문자로 바꾸는 속성 */
+  padding: 5px 10px;
+  border-radius: 10px;
+  outline: none;
+  /* 말그대로 바깥 선 표시하는 것 */
+  cursor: pointer;
+  /* 마우스를 대면 포인터 모양 */
+}
+.notCompleted,
+.Completed {
+  margin: 5px 0;
+  padding: 20px;
+}
+h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+ol {
+  list-style: none;
+  counter-reset: my-counter;
+}
+ol li {
+  width: 100%;
+  padding: 20px;
+  margin: 5px 0;
+  background: #e96969bb;
+  border-radius: 5px;
+  font-size: 18px;
+  counter-increment: my-counter;
+}
+
+ol.Completed li {
+  background: #00ff62;
+}
+
+ol li::before {
+  /* CSS에서, ::before는 선택한 요소의 첫 자식으로 의사 요소를 하나 생성합니다 */
+  content: counter(my-counter);
+  background: #231381;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  /* em과 rem은 둘 다 CCS의 font-size 속성 값에 비례해서 결정되는 상대 단위 (rem은 최상이 단위, em은 해당
+  단위가 사용되고 있는 font-size속성 값이 기준이 된다*/
+  display: inline-block;
+  /* display 속성이 inline-block으로 지정된 엘리먼트는 기본적으로 inline 엘리먼트처럼 
+  전후 줄바꿈 없이 한 줄에 다른 엘리먼트들과 나란히 배치됩니다. 하지만 inline 엘리먼트에서 
+  불가능하던 width와 height 속성 지정 및 margin과 padding 속성의 상하 간격 지정이 가능해집니다. */
+  line-height: 2rem;
+  /* line-height는 줄 높이를 정하는 속성입니다. */
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+li button {
+  float: right;
+  /* CSS 속성(property) float 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 
+  \텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다. */
+  font-size: 24px;
+  line-height: 24px;
+  margin-right: 18px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
