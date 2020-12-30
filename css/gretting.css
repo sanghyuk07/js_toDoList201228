@@ -1,17 +1,19 @@
 .gretting_name {
   font-size: 25px;
-  border: none;
+  border: 1px;
   padding: 10px 15px;
-  margin-bottom: 30px;
+
   /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-  border-radius: 10px;
+
   background: none;
-  color: black;
+  border-bottom: 2px solid black;
+
   /* width: 100%; */
 }
-.gretting_name ::placeholder {
-  color: black;
-}
+/* input ::-moz-placeholder {
+  color: violet;
+  font-size: 100px;
+} */
 .form,
 .grettingNone {
   display: none;
@@ -30,5 +32,9 @@
   font-weight: bold;
   margin-bottom: 30px;
   color: white; */
-  display: block;
+  display: flex;
+}
+.gretting.form.showing {
+  justify-content: center;
+  margin-bottom: 30px;
 }
