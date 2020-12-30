@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head></head>
         <meta charset="UTF-8">
         <meta property=”og:title” content=”To-Do-List”>
         <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EZHCcpbgOmKiHAMGKCriPw8ovUeuO80COA&usqp=CAU">
-        <meta property=”og:image:width” content=”800"/>
-        <meta property=”og:image:height” content=”400"/> 
+        <meta property=”og:image:width” content="800"/>
+        <meta property=”og:image:height” content="400"/> 
         <meta property=”og:site_name” content=”To-Do-List”/>
         <link rel="stylesheet" href="css/style.css">
-        <title>To-Do List</title>
+        <link rel="stylesheet" href="css/gretting.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/bg.css">
+        <link rel="stylesheet" href="css/clock.css">
+        
+        <title>Make your To-Do List</title>
     
     </head>
     <body>
+        <main class="main">
+            <div class ="js-clock">
+                <h1 class ="js-clock_text">00:00:00</h1>
+            </div>
+          
+        </main>
+
         <form class="container">
             <div class ="addTask">
                 <input type="text" placeholder="Add a Task">
@@ -20,8 +32,14 @@
             </div>
         </form>
 
+
         <ol class='notCompleted'>
-            <h3>당신의 오늘 할일은 무엇인가요?</h3>
+            <form class ='gretting form showing'>
+                <input class ="gretting_name" type ="text" placeholder="이름을 입력하세요."/>
+
+            </form>
+
+            <h3 class='grettings_result grettingNone'>오늘 할일, 못하면 내일하기</h3>
             <!-- <li>Task
                 <button><i class='fa fa-trash'></i></button>
                 <button><i class='fa fa-check'></i></button>
@@ -30,7 +48,7 @@
 
         <ol class='Completed'>
 
-            <h3>오늘 벌써 이만큼이나 했어요:)</h3>
+            <h3 class="Completed_result">오늘 벌써 이만큼이나:)</h3>
             <!-- <li>Task
                 <button><i class='fa fa-trash'></i></button>
             </li> -->
@@ -39,6 +57,9 @@
     
     </body>
     <script src= "js/index.js"></script>
+    <script src= "js/gretting.js"></script>
+    <script src= "js/bg.js"></script>
+    <script src= "js/clockshow.js"></script>
 
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </html>
