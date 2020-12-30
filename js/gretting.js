@@ -9,7 +9,7 @@ const SHOWING_CN_2 ="showing";
 function askForName(){
     form_2.classList.add(SHOWING_CN_2); // class 추가하기
     form_2.addEventListener("submit",handleSubmit)
-    console.log('야');
+   
 }
 
 function addGreeting(text){
@@ -21,8 +21,9 @@ function addGreeting(text){
     
     form_2.classList.remove(SHOWING_CN_2);
     h3.classList.add(SHOWING_CN_2);
-    h3.innerText =`${text}님! "${year}-${month}-${dateToday}" 
-    오늘 할일을 적어주세요!`;
+    h3.innerText =`${year}년 ${month+1}월 ${dateToday}일
+    ${text}님, 오늘 할일 하나씩 정리해보세요.`;
+    
     console.log(text);
 }
 
