@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 
-const IMG_NUMBER = 3; //몇개의 이미지가 있나
+const IMG_NUMBER = 8; //몇개의 이미지가 있나
 
 
 
